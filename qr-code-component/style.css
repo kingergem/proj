@@ -2,28 +2,28 @@
 body, main {
 	margin: 0;
 	padding: 0;
-	height: 100vh;	
+}
 main {
 	background: hsl(212, 45%, 89%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	height: 100vh;
 	box-sizing: border-box;
 	font-family: Outfit, sans-serif;
 	font-size: 15px;
-	overfow: hidden;
 	
 }
 
 .container {
-	width: 30%;
+	width: 20%;
 	padding: 10px;
 	background: white;
 	min-width: 270px;
 	box-shadow: 0 0 5px #4e4e4e,
-			0 0 10px #ddd,
-			0 0 20px #eee;
+				0 0 10px #ddd,
+				0 0 20px #eee;;
 	
 }
 .container h2, .container p {
