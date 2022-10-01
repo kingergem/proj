@@ -22,8 +22,8 @@ main {
 	background: white;
 	min-width: 270px;
 	box-shadow: 0 0 5px #4e4e4e,
-				0 0 10px #ddd,
-				0 0 20px #eee;;
+			0 0 10px #ddd,
+			0 0 20px #eee;
 	
 }
 .container h2, .container p {
