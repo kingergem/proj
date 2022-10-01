@@ -1,0 +1,103 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #0D1A2D;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+	font-size: 18px;
+	font-family: calibri;
+	-webkit-font-smoothing: antialiased;
+}
+.container {
+	background: #15273F;
+	max-width: 281px;
+	max-height: 479px;
+	transition: .5s all;
+	border-radius: 10px;
+	padding: 20px;
+	box-sizing: border-box;
+	font-family: calibri, serif;
+	font-weight: bold;
+}
+.container .image, .image .hover, .image .hide {
+	height: 245px;
+	width: 245px;
+	border-radius: 10px;
+} 
+.container .image {
+	background-image: url("./images/image-equilibrium.jpg");
+	background-size: cover;
+}
+.image .hide, .image .hover {
+	position: absolute;
+	display: none;
+	transition: 1s all;
+}
+.image:hover .hover, .image:hover .hide {
+	display: block;
+}
+.image .hide {
+	background-size: cover;
+	background-color: #00fefd;
+	opacity: .5;
+}
+.image .hover {
+	//display: none;
+	background: url("./images/icon-view.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 5;
+	
+	opacity: .5;
+}
+.content > p:nth-child(2), .content > p:last-child, .author p{
+	color: #9bb5dd;
+}
+.content .etherium-cont {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 10px 0;
+}
+.content .border-line {
+	background-color: #273951;
+	height: 1px;
+}
+.content > p:first-child{
+	color: #fff;
+}
+.content p:first-child:hover {
+	color: #00fefd;
+}
+.etherium-cont .eth {
+	color: #00fefd;
+}
+.etherium-cont .days-left {
+	color: #9bb5dd;
+}
+.content > p:first-child, .container .image, .content .author p span {
+	cursor: pointer;
+}
+.content  .author{
+	font-size: .8rem;
+	letter-spacing: 2px;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+}
+.content .author p span {
+	color: #fff;
+	transition: 1s all;
+} 
+.content .author p:hover span {
+	color: #00fefd;
+}
+.content .author img {
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+	border: 1px solid #9bb5dd;
+}
