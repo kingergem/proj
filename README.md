@@ -1,2 +1,2 @@
-# This repository is for done challenges.
+# This repository is for finished challenges.
 anyone can contribute or edit the challenges.
