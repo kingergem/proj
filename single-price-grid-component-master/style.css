@@ -125,7 +125,7 @@ a {
 
 @media only screen and (max-width: 500px) {
 	body {
-		height: 100vh;
+		height: 140vh;
 	}
 	main {
 		width: 80%;
