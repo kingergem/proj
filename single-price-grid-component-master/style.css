@@ -18,7 +18,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	font-family: Montserrat, monosans;
-	width: 80%;
+	width: 70%;
 	border: 2px solid rgba(0, 255, 255, 0.5); /* Adjust color and opacity as desired */
   	animation: glow 2s infinite alternate;
   	border-radius: 1rem;
