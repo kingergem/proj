@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: aliceblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	flex-direction: column;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	font-family: Montserrat, monosans;
+	width: 80%;
+	border: 2px solid rgba(0, 255, 255, 0.5); /* Adjust color and opacity as desired */
+  	animation: glow 2s infinite alternate;
+  	border-radius: 1rem;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Adjust glow color and size */
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Adjust glow color and size */
+  }
+}
+
+main section:nth-child(1) {
+	background: #fff;
+	padding: 2rem;
+	border-radius: .5rem .5rem 0 0 ;
+}
+
+main section:nth-child(1) p{
+	color: silver;
+	padding: 1rem 0;
+}
+main section:nth-child(1) h1{
+	color: #2bb3b1;
+	padding: 1rem 0;
+}
+/*Make the element inside the section 2 display flex for the equal division*/
+
+main section:nth-child(2) {
+	display: flex;
+	justify-content: space-between;
+}
+main section:nth-child(2) div {
+	flex: 1;
+}
+main section:nth-child(2) .left {
+	background: #2bb3b1;
+	padding: 2rem;
+	border-radius: 0 0 0 1rem;
+	color: white;
+}
+
+.left h3 {
+	padding: .75rem 0;
+}
+.left h2 {
+	display: inline;
+	font-size: 2rem;
+}
+.left span {
+	color: silver;
+}
+.left .padding {
+	padding: .5rem 0;
+}
+.left button {
+	border: none;
+	width: 100%;
+	padding: .75rem;
+	margin: 1rem 0 0 0;
+	border-radius: .4rem;
+	font-family: inherit;
+	font-weight: 1000;
+	font-size: 1.5rem;
+	color: inherit;
+	background: #bfd832;
+	cursor: pointer;
+}
+.left button:hover {
+	transform: scale(.99);
+}
+main section:nth-child(2) .right {
+	background: #4abebd;
+	padding: 2rem;
+	border-radius: 0 0 1rem 0;
+}
+.right h3 {
+	padding: 1rem 0;
+	color: white;
+}
+.right ul li:hover {
+	transform: translate(10px);
+}
+.right ul li {
+	transition: .1s ease-in;
+}
+.right ul li a{
+	color: silver;
+}
+/* remove default styles*/
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/*--------------------------*/
+
+/* for mobile phone*/
+
+@media only screen and (max-width: 500px) {
+	body {
+		height: 180vh;
+	}
+	main section:nth-child(2) {
+		flex-direction: column;
+	}
+
+	main section:nth-child(2) .left {
+	border-radius: 0;
+	}
+
+	main section:nth-child(2) .right {
+	border-radius: 0 0 1rem 1rem;
+	color: white;
+
+	.right ul li {
+		padding: 1rem 0;
+		animation: none;
+	}
+}
+}
