@@ -127,6 +127,9 @@ a {
 	body {
 		height: 180vh;
 	}
+	main {
+		width: 80%;
+	}
 	main section:nth-child(2) {
 		flex-direction: column;
 	}
