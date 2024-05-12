@@ -1,37 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&family=Outfit:wght@400;700&display=swap');
-body, main {
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+html {
+	font-size: 15px;
+}
+* {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: lightgrey;
+	height: 100vh;
 }
 main {
-	background: hsl(212, 45%, 89%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 100vh;
-	box-sizing: border-box;
-	font-family: Outfit, sans-serif;
-	font-size: 15px;
-	
-}
-
-.container {
-	width: 20%;
-	padding: 10px;
+	width: 300px;
+	min-width: 300px;
 	background: white;
-	min-width: 270px;
-	box-shadow: 0 0 5px #4e4e4e,
-				0 0 10px #ddd,
-				0 0 20px #eee;;
-	
+	padding: 20px;
+	border-radius: 1rem;
+	font-family: Outfit, sans-serif;
 }
-.container h2, .container p {
-	text-align: center;
-}
-img {
+main img {
 	width: 100%;
+	border-radius: inherit;
 }
-img, .container {
-	border-radius: 10px;
+h2, p {
+	text-align: center;
+	margin: 10px;
+}
+h2 {
+	font-size: 1.5rem;
+}
+p {
+	font-size: 1rem;
+}
+.attribution {
+	font-family: Outfit, sans-serif;
+	margin: 10px;
 }
