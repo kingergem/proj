@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+	font-size: 16px;
+}
+/* Reset to default*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: hsl(47, 88%, 63%);
+}
+main {
+	width: 375px;
+	margin-top: 4%;
+	padding: 20px;
+	background: white;
+	border: 1px solid black;
+	border-radius: 1em;
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	font-family: 'Figtree', sans-serif;
+	transition: .5s all;
+
+}
+main:hover {
+	box-shadow: 5px 5px;
+	transform: translate(-5px, -5px)
+}
+main > p:nth-child(2) {
+	background: hsl(47, 88%, 63%);
+	align-self: flex-start;
+	padding: .5rem 1rem;
+	border-radius: 5px;
+}
+
+main > p:nth-child(5) {
+	color: grey;
+}
+main p {
+	font-weight: 300;
+}
+
+main > img {
+	border-radius: 1em;
+}
+.author {
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+}
+.author span {
+	padding: 0 13px;
+	font-family: inherit;
+}
+p, h2, .author {
+	margin: 1rem 0 0 0 ;
+}
+h2, main > p:nth-child(2), span {
+	font-weight: 800;
+}
+.attribution {
+	font-family: Figtree, sans serif;
+	margin: 10px;
+}
+
+/*for mobile phones*/
+
+@media only screen and (max-width: 375px) {
+	main {
+		width: 80%;
+	}
+}
