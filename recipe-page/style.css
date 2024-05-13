@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*
+ White: hsl(0, 0%, 100%)
+- Rose White: hsl(330, 100%, 98%)
+- Eggshell: hsl(30, 54%, 90%)
+- Light Grey: hsl(30, 18%, 87%)
+- Wenge Brown: hsl(30, 10%, 34%)
+- Dark Charcoal: hsl(24, 5%, 18%)
+Nutmeg: hsl(14, 45%, 36%)
+- Dark Raspberry: hsl(332, 51%, 32%)
+*/
+/*setting fonts*/
+h2, h3, h1{
+	font-family: 'Young Serif', serif;
+	color: hsl(24, 5%, 18%);
+	font-weight: 100;
+}
+h2, h3 {
+	color: hsl(14, 45%, 36%);
+}
+/* moving inwards the lists*/
+li {
+	margin: 0 0 0 40px;
+    list-style-position: inside; /* This moves the bullet inside the padding */
+    text-indent: 0;
+    padding: 5px;
+}
+li::marker {
+	color: hsl(30, 10%, 34%)
+}
+/*make a spacing*/
+h1, p, table, .preparation, ol, ul {
+	margin: 10px 0;
+}
+
+body {
+	background: hsl(30, 54%, 90%);
+}
+main {
+	width: 60%;
+	min-width: 300px;
+	margin: 10px auto;
+	background: white;
+	padding: 20px;
+	color: ;
+	border-radius: .5rem;
+	font-family: Outfit;
+}
+main img {
+	width: 100%;
+	border-radius: inherit;
+}
+
+span, tr td:nth-child(2) {
+	font-weight: bold;
+	color: hsl(24, 5%, 18%);
+}
+tr td:nth-child(2) {
+	color: hsl(14, 45%, 36%);
+}
+.preparation {
+	background: hsl(330, 100%, 98%);
+	padding: 1rem;
+}
+.preparation li {
+	margin: 0 0 0 30px;
+}
+/*styling the table*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table tr {
+
+}
+table tr td{
+	border-bottom: 1px solid black;
+	padding: 10px 0;
+	
+}
+.attribution {
+	font-family: Outfit;
+	margin: 30px;
+	animation: test .5 ease infinite;
+}
+.attribution p {
+	font-size: 1.1rem;
+	margin: 0 0 40px 0;
+}
+.attribution p a {
+	text-decoration: none;
+	background: hsl(14, 45%, 36%);
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	display: inline-block;
+	animation: shake .8s cubic-bezier(.36,.07,.19,.97) both infinite;
+  transform: translate3d(0, 0, 0); /* Improves performance */
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+@keyframes test {
+	0% {
+		background: green;
+	}
+	100% {
+		background: red;
+	}
+}
