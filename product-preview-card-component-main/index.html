@@ -1,23 +1,43 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Frontend Mentor | Product Preview Card Component</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<div class="container">
-			<div class=" divider picture"></div>
-			<div class=" divider content">
-				<p>PERFUME</p>
-				<h2>Gabrielle Essence Eau De Parfum</h2>
-				<p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
-				<div class="price">
-					<p class="after-price">$149.99</p>
-					<p class="before-price">$169.99</p>
-				</div>
-				<button><span><img src="./images/icon-cart.svg"></span>Add to cart</button>
-			</div>
-		</div>
-		
-	</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Product preview card component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <article>  
+      <figure>
+        <picture>
+          <source media="(max-width: 400px)" srcset="./images/image-product-mobile.jpg">
+          <source media="(min-width: 401px)" srcset="./images/image-product-desktop.jpg">
+          <img src="./images/image-product-desktop.jpg" alt="A bottle of Gabrielle Essence Eau De Parfum perfume."> 
+        </picture>
+      </figure>
+      <div class="content"> 
+        <div class="caption">PERFUME</div>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+
+        <div class="price-container"> 
+          <p class="current-price">$149.99</p>
+          <p class="original-price"><del>$169.99</del></p> 
+        </div>
+
+        <button type="button" class="add-to-cart-btn">
+          <img src="/images/icon-cart.svg" alt="Add to Cart Icon" aria-hidden="true"> Add to Cart
+        </button>
+      </div> 
+    </article>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+  
+</body>
 </html>

@@ -1,95 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&display=swap');
-body {
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* General Styles */
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/*min-height: 100vh;*/
-	font-family: Montserrat;
-	background: hsl(30, 38%, 92%);
-	color: hsl(228, 12%, 48%);
-	
 }
-.container {
-	height: 70vh;
-	width: 50vw;
-	display: flex;
-	border-radius: 10px;
+html {
+	font-size: 14px;
 }
-.container .picture {
-	background: url('./images/image-product-desktop.jpg');
-	background-size: cover;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-	width: 60%;
+body {
+  margin: 0;
+  display: flex; /* Enable flexbox for centering content */
+  flex-direction: column; /* Stack content vertically */
+  min-height: 100vh; /* Ensure footer stays at the bottom */
+  background-color: hsl(30, 38%, 92%);
 }
-.container .content {
-	background: #fff;
-	padding: 20px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	width: 40%;
+
+main {
+  flex: 1; /* Allow main content to take available space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* Article Styling */
+article {
+  display: flex; /* Enable flexbox for article layout */
+  max-width: 600px; /* Limit maximum width for desktop */
+  padding: 1rem; /* Add some padding around the article */
+  font-family: Fraunces, serif;
+  background-color: white;
+  font-size: clamp(1.2rem, 2vw, 1.2rem);
+  border-radius: .5rem;
+}
+.caption, p {
+	font-family: Montserrat, sans-serif;
+}
+/* Figure Styling */
+.caption {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: gray;
+}
+figure img,figure source {
+  max-width: 100%; /* Ensure image never exceeds container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: .4rem;
+}
+
+
+/* Content Styling */
+.content {
+  padding: 0 0 0 1.5rem; /* Add padding to the content div */
+}
+
+.caption, h1, p, .price-container, .add-to-cart-btn {
+	margin-bottom: 1rem;
+}
+.content h1 {
+  color: hsl(212, 21%, 14%)
 }
 .content > p {
-	letter-spacing: 4px;
+	color: gray;
+	font-weight: 500;
 }
-.content > h2 {
-	font-family: Fraunces;
-	color: hsl(212, 21%, 14%);
+
+.price-container {
+  display: flex;
+  align-items: center;
+  color: hsl(158, 36%, 37%);
 }
-.content .price {
-	font-family: Fraunces;
-	display: flex;
-	justify-content: space-around;
+.current-price, .original-price {
+	font-family: Fraunces, serif;
 }
-.content .price .after-price {
-	font-size: 2em;
-	color: hsl(158, 36%, 37%);
+.current-price {
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-weight: bold;
 }
-.content .price .before-price {
-	text-decoration: line-through;
-	align-self: center;
+.original-price {
+	color: gray;
 }
-button {
-	padding: 10px 50px;
-	border: none;
-	background-color: hsl(158, 36%, 37%);
-	color: white;
-	font-size: 1rem;
-	border-radius: 10px;
-	font-family: Fraunces;
+
+.add-to-cart-btn {
+  display: flex; /* Enable flexbox for button layout */
+  align-items: center;
+  gap: 0.5rem;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+
 }
-button:hover {
-	background-color: hsl(158deg 55% 18%);
+
+.add-to-cart-btn:hover {
+  background-color: hsl(158, 36%, 20%);
+
 }
-img {
-	height: 20px;
-	width: 20px;
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
 }
-@media only screen and (max-width: 500px) {
-	
-	.container {
-		flex-direction: column;
-		height: 90vh;
-		width: 90vw;
-	}
-	.container .picture{
-		width: 100%;
-		height: 40%;
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-		border-bottom-left-radius: 0;
-	}
-	.container .content {
-		height: 60%;
-		min-width: 91%;
-		border-bottom-left-radius: 10px;
-		border-bottom-right-radius: 10px;
-		border-top-right-radius: 0;
-	}
-	.content > h2, .content > p {
-	margin: 10px 0;
-}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 400px) { 
+  article {
+    flex-direction: column; /* Stack figure and content vertically on mobile */
+    max-width: 100%; /* Take full width on mobile */
+    margin: 1rem; /* Add margin on mobile */
+    font-size: 1rem;
+  }
+  figure img {
+    width: 100%; /* Ensure the image takes full width on mobile */
+  }
+  .content {
+  	padding: 0;
+  }
 }
