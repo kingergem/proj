@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Poppins';
-	src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+	src: url("./fonts/Poppins-Regular.ttf") format("truetype");
 }
 html {
 	font-size: 15px;
@@ -89,6 +89,10 @@ div[class^=card] img {
 	align-self: flex-end;
 	flex: 0 0 auto;
 	width: min(50px, 30%);
+}
+.attribution {
+	font-family: Poppins;
+	text-align: center;
 }
 
 @media only screen and (max-width: 500px) {
