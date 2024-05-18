@@ -84,6 +84,7 @@ div[class^=card] h2 {
 }
 div[class^=card] p {
 	font-size: clamp(.5rem, 2vw, 1rem);
+	margin-bottom: 1em;
 }
 div[class^=card] img {
 	align-self: flex-end;
